@@ -8,10 +8,11 @@ import { useState } from "react";
 
 function HomePage() {
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage, setPostsPerPage] = useState(6);
+  const postsPerPage = 6;
   const lastPostIndex = currentPage * postsPerPage;
   const firstPostIndex = lastPostIndex - postsPerPage;
   const currentPosts = jobs.slice(firstPostIndex, lastPostIndex);
+
   return (
     <Container>
       <Grid container spacing={2} mt={1}>
